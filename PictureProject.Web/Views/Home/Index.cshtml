@@ -1,8 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+﻿<div class="container">
+    <main role="main" class="pb-3">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 jumbotron">
+                <form method="post" action="/home/upload" enctype="multipart/form-data">
+                    <input type="file" name="imageFile" />
+                    <br />
+                    <input type="text" class="form-control" name="password" placeholder="Custom Password" />
+                    @*<input type="text" class="form-control" name="fileName" placeholder="Name" />*@
+                    <br />
+                    <button class="btn btn-primary">Upload</button>
+                </form>
+            </div>
+        </div>
+    </main>
